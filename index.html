@@ -29,7 +29,7 @@
         * { font-family: 'Montserrat', sans-serif; }
         html { scroll-behavior: smooth; }
         
-        /* Плавающая кнопка записи — круглая в покое, pill при наведении */
+        /* Плавающая кнопка записи */
         .floating-booking-btn {
             position: fixed;
             bottom: 2rem;
@@ -38,10 +38,9 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
             height: 60px;
             width: 60px;
-            padding: 0 1.5rem;
+            padding: 0 18px;
             border-radius: 9999px;
             background: #c19b6e;
             color: white;
@@ -52,7 +51,13 @@
             opacity: 0;
             visibility: hidden;
             transform: scale(0.8);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: 
+                width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.3s ease,
+                opacity 0.4s ease,
+                visibility 0.4s ease,
+                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             white-space: nowrap;
         }
         
@@ -63,38 +68,46 @@
         }
         
         .floating-booking-btn:hover {
-            width: auto;
-            min-width: 180px;
-            box-shadow: 0 12px 32px rgba(193, 155, 110, 0.5);
-            transform: translateY(-2px);
+            width: 180px;
             background: #d4b48a;
+            box-shadow: 0 12px 32px rgba(193, 155, 110, 0.5);
         }
         
         .floating-booking-btn:active {
-            transform: translateY(0);
+            transform: scale(0.95);
         }
         
         .floating-booking-btn .btn-icon {
             flex-shrink: 0;
             width: 20px;
             height: 20px;
+            transition: transform 0.3s ease;
+        }
+        
+        .floating-booking-btn:hover .btn-icon {
+            transform: scale(1.05);
         }
         
         .floating-booking-btn .btn-label {
             opacity: 0;
             max-width: 0;
-            font-size: 0.95rem;
+            margin-left: 0;
+            font-size: 0.9rem;
             font-weight: 500;
-            transition: all 0.3s ease 0.1s;
             overflow: hidden;
+            transition: 
+                opacity 0.3s ease 0.1s,
+                max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s,
+                margin-left 0.4s cubic-bezier(0.4, 0, 0.2, 1) 0.1s;
         }
         
         .floating-booking-btn:hover .btn-label {
             opacity: 1;
             max-width: 120px;
+            margin-left: 10px;
         }
         
-        /* На мобильных кнопка остаётся круглой, текст не показываем */
+        /* Мобильные: кнопка остаётся круглой, без раскрытия */
         @media (max-width: 640px) {
             .floating-booking-btn {
                 bottom: 1.5rem;
@@ -105,8 +118,6 @@
             
             .floating-booking-btn:hover {
                 width: 56px;
-                min-width: 56px;
-                transform: scale(1.05);
                 background: #c19b6e;
             }
             
@@ -122,11 +133,11 @@
             }
             
             .floating-booking-btn:hover {
-                min-width: 170px;
+                width: 170px;
             }
         }
         
-        /* Остальные стили */
+        /* Остальные стили сайта */
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
         .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
@@ -819,7 +830,7 @@
         </div>
     </footer>
 
-    <!-- Плавающая круглая кнопка записи — раскрывается в pill при наведении -->
+    <!-- Плавающая круглая кнопка записи с плавным раскрытием -->
     <button id="floatingBookingBtn" class="floating-booking-btn" onclick="openBooking()" aria-label="Записаться на приём">
         <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
         <span class="btn-label">Записаться</span>
