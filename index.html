@@ -2,39 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#075858">
-    
-    <title>3D+ Диагностика доктора Дракиной — УЗИ в Брянске | Гинекология, акушерство, маммология</title>
-    <meta name="description" content="Кабинет ультразвуковой диагностики доктора Дракиной в Брянске. УЗИ гинекология, акушерство, 3D/4D, молочные железы. 22+ года опыта. Запись онлайн. ул. Дуки, 75.">
-    <meta name="keywords" content="УЗИ Брянск, гинекологическое УЗИ, акушерское УЗИ, 3D УЗИ, 4D УЗИ, УЗИ молочных желез, допплерография, доктор Дракина, диагностика Брянск, частный кабинет УЗИ, УЗИ при беременности, BI-RADS">
-    <meta name="author" content="Доктор Дракина">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-    <meta name="googlebot" content="index, follow">
-    <link rel="canonical" href="https://drakina.ru/">
-    
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ru_RU">
-    <meta property="og:url" content="https://drakina.ru/">
-    <meta property="og:site_name" content="3D+ Диагностика доктора Дракиной">
-    <meta property="og:title" content="3D+ Диагностика доктора Дракиной — УЗИ в Брянске">
-    <meta property="og:description" content="Кабинет ультразвуковой диагностики в Брянске. Гинекология, акушерство, УЗИ молочных желез. 22+ года опыта. Запись онлайн.">
-    <meta property="og:image" content="https://drakina.ru/ico.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="3D+ Диагностика доктора Дракиной — УЗИ в Брянске">
-    <meta name="twitter:description" content="Кабинет ультразвуковой диагностики в Брянске. Гинекология, акушерство, УЗИ молочных желез. 22+ года опыта.">
-    <meta name="twitter:image" content="https://drakina.ru/ico.jpg">
-    
-    <link rel="icon" type="image/jpeg" href="./ico.jpg">
-    <link rel="shortcut icon" href="./ico.jpg">
-    <link rel="apple-touch-icon" href="./ico.jpg">
-    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D+ Диагностика доктора Дракиной</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap">
     <script>
         tailwind.config = {
             theme: {
@@ -45,7 +16,6 @@
                         secondary: '#636663',
                         accent: '#c19b6e',
                         'accent-light': '#d4b48a',
-                        burgundy: '#882058',
                         cream: '#faf8f5',
                     },
                     fontFamily: {
@@ -55,50 +25,107 @@
             }
         }
     </script>
-    
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Physician",
-        "@id": "https://drakina.ru/#physician",
-        "name": "3D+ Диагностика доктора Дракиной",
-        "alternateName": "Кабинет ультразвуковой диагностики доктора Дракиной",
-        "description": "Частный кабинет ультразвуковой диагностики в Брянске. Специализация: гинекология, акушерство, УЗИ молочных желез. Более 22 лет опыта.",
-        "url": "https://drakina.ru/",
-        "telephone": "+79208432444",
-        "email": "mail@r-band.ru",
-        "image": "https://drakina.ru/ico.jpg",
-        "logo": { "@type": "ImageObject", "url": "https://drakina.ru/ico.jpg" },
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "ул. Дуки, д. 75",
-            "addressLocality": "Брянск",
-            "addressRegion": "Брянская область",
-            "postalCode": "241000",
-            "addressCountry": "RU"
-        },
-        "geo": { "@type": "GeoCoordinates", "latitude": 53.265601, "longitude": 34.352915 },
-        "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-            "opens": "09:00", "closes": "16:00"
-        },
-        "medicalSpecialty": ["Gynecologic","Obstetric","Radiography"],
-        "availableService": [
-            { "@type": "MedicalTherapy", "name": "Гинекологическое УЗИ" },
-            { "@type": "MedicalTherapy", "name": "Акушерское УЗИ" },
-            { "@type": "MedicalTherapy", "name": "3D/4D УЗИ" },
-            { "@type": "MedicalTherapy", "name": "УЗИ молочных желез" }
-        ],
-        "sameAs": ["https://www.instagram.com/doctor_drakina","https://vk.ru/doctor_drakina"],
-        "areaServed": { "@type": "City", "name": "Брянск" }
-    }
-    </script>
-
     <style>
         * { font-family: 'Montserrat', sans-serif; }
         html { scroll-behavior: smooth; }
         
+        /* Плавающая кнопка записи - круглая с раскрывающимся текстом */
+        .floating-booking-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 90;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #c19b6e;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(193, 155, 110, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(0.8);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .floating-booking-btn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+        }
+        
+        .floating-booking-btn:hover {
+            width: 180px;
+            box-shadow: 0 12px 32px rgba(193, 155, 110, 0.5);
+            transform: scale(1.05);
+        }
+        
+        .floating-booking-btn:active {
+            transform: scale(0.98);
+        }
+        
+        .floating-booking-btn .btn-icon {
+            flex-shrink: 0;
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+        }
+        
+        .floating-booking-btn:hover .btn-icon {
+            transform: scale(1.1);
+        }
+        
+        .floating-booking-btn .btn-label {
+            opacity: 0;
+            max-width: 0;
+            margin-left: 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: all 0.3s ease 0.1s;
+        }
+        
+        .floating-booking-btn:hover .btn-label {
+            opacity: 1;
+            max-width: 120px;
+            margin-left: 8px;
+        }
+        
+        /* Адаптивность для мобильных */
+        @media (max-width: 640px) {
+            .floating-booking-btn {
+                bottom: 1.5rem;
+                right: 1.5rem;
+                width: 56px;
+                height: 56px;
+            }
+            
+            .floating-booking-btn:hover {
+                width: 56px; /* На мобильных не расширяем */
+            }
+            
+            .floating-booking-btn .btn-label {
+                display: none; /* На мобильных текст не показываем */
+            }
+        }
+        
+        @media (min-width: 641px) and (max-width: 1024px) {
+            .floating-booking-btn {
+                bottom: 1.5rem;
+                right: 1.5rem;
+            }
+            
+            .floating-booking-btn:hover {
+                width: 160px;
+            }
+        }
+        
+        /* Остальные стили */
         .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
         .fade-in-left { opacity: 0; transform: translateX(-40px); transition: opacity 0.8s ease, transform 0.8s ease; }
@@ -167,18 +194,8 @@
         }
         .booking-close:hover, .map-close:hover { background: #f5f5f5; transform: rotate(90deg); }
         
-        /* ИСПРАВЛЕНО: убрана прокрутка в модалке записи */
-        .booking-iframe-wrapper { 
-            width: 100%; 
-            height: 702px; 
-            overflow: hidden;
-        }
-        .booking-iframe-wrapper iframe { 
-            width: 100%; 
-            height: 100%; 
-            border: 0; 
-            display: block;
-        }
+        .booking-iframe-wrapper { width: 100%; height: 702px; overflow: hidden; }
+        .booking-iframe-wrapper iframe { width: 100%; height: 100%; border: 0; display: block; }
         
         .map-iframe-wrapper { width: 100%; height: 500px; }
         .map-iframe-wrapper iframe { width: 100%; height: 100%; border: 0; display: block; }
@@ -214,7 +231,6 @@
         .doctor-photo-wrapper img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform 0.6s ease; }
         .doctor-photo-wrapper:hover img { transform: scale(1.03); }
 
-        /* ИСПРАВЛЕНО: убран !important, навбар работает корректно */
         #navbar {
             transition: background-color 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
             will-change: background-color;
@@ -268,16 +284,25 @@
         }
         
         @media (min-width: 640px) {
-            .stat-card {
-                min-height: 180px;
-                padding: 2rem 1rem;
-            }
-            .stat-value {
-                height: 90px;
-            }
-            .stat-label {
-                min-height: 44px;
-            }
+            .stat-card { min-height: 180px; padding: 2rem 1rem; }
+            .stat-value { height: 90px; }
+            .stat-label { min-height: 44px; }
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
+            background: #000;
+        }
+        
+        .video-wrapper iframe, .video-wrapper video {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            border: 0;
         }
     </style>
 </head>
@@ -295,7 +320,7 @@
                 </a>
                 
                 <div class="hidden md:flex items-center gap-6 lg:gap-8">
-                    <a href="#doctor" class="nav-link text-sm lg:text-base font-medium text-white hover:text-accent">Обо мне</a>
+                    <a href="#about" class="nav-link text-sm lg:text-base font-medium text-white hover:text-accent">О нас</a>
                     <a href="#services" class="nav-link text-sm lg:text-base font-medium text-white hover:text-accent">Услуги</a>
                     <a href="#advantages" class="nav-link text-sm lg:text-base font-medium text-white hover:text-accent">Преимущества</a>
                     <a href="#contacts" class="nav-link text-sm lg:text-base font-medium text-white hover:text-accent">Контакты</a>
@@ -314,7 +339,7 @@
         
         <div id="mobile-menu" class="hidden md:hidden" role="menu">
             <div class="px-4 py-4 space-y-2">
-                <a href="#doctor" class="mobile-link block text-sm font-medium text-primary py-3 px-3 rounded-lg hover:bg-cream transition-colors" role="menuitem">Обо мне</a>
+                <a href="#about" class="mobile-link block text-sm font-medium text-primary py-3 px-3 rounded-lg hover:bg-cream transition-colors" role="menuitem">О нас</a>
                 <a href="#services" class="mobile-link block text-sm font-medium text-primary py-3 px-3 rounded-lg hover:bg-cream transition-colors" role="menuitem">Услуги</a>
                 <a href="#advantages" class="mobile-link block text-sm font-medium text-primary py-3 px-3 rounded-lg hover:bg-cream transition-colors" role="menuitem">Преимущества</a>
                 <a href="#contacts" class="mobile-link block text-sm font-medium text-primary py-3 px-3 rounded-lg hover:bg-cream transition-colors" role="menuitem">Контакты</a>
@@ -355,7 +380,7 @@
                                 Записаться на приём
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                             </button>
-                            <a href="#doctor" class="inline-flex items-center justify-center gap-2 border border-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300">
+                            <a href="#about" class="inline-flex items-center justify-center gap-2 border border-white/30 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full font-medium hover:bg-white/10 transition-all duration-300">
                                 Узнать больше
                             </a>
                         </div>
@@ -365,11 +390,11 @@
                         <div class="relative float-animation">
                             <div class="w-80 h-80 mx-auto rounded-full bg-gradient-to-br from-white/10 to-white/5 border border-white/20 flex items-center justify-center">
                                 <div class="w-60 h-60 rounded-full bg-gradient-to-br from-white/10 to-white/5 border border-white/15 flex items-center justify-center">
-                                    <div class="w-40 h-40 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 border border-accent/30 flex items-center justify-center cursor-pointer group" onclick="document.getElementById('doctor').scrollIntoView({behavior: 'smooth'})">
+                                    <div class="w-40 h-40 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 border border-accent/30 flex items-center justify-center cursor-pointer group" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})">
                                         <div class="text-center">
                                             <div class="text-4xl font-bold text-accent counter-value" data-target="22" id="heroCounter">0</div>
                                             <div class="text-xs text-white/60 mt-1 tracking-wider">ГОДА ОПЫТА</div>
-                                            <div class="text-[10px] text-accent/80 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">→ обо мне</div>
+                                            <div class="text-[10px] text-accent/80 mt-2 opacity-0 group-hover:opacity-100 transition-opacity">→ о нас</div>
                                         </div>
                                     </div>
                                 </div>
@@ -392,7 +417,7 @@
             </div>
         </section>
 
-        <section id="doctor" class="py-16 sm:py-24 lg:py-32 bg-white" aria-labelledby="doctor-title">
+        <section id="about" class="py-16 sm:py-24 lg:py-32 bg-white" aria-labelledby="about-title">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
                 <div class="grid lg:grid-cols-5 gap-8 lg:gap-16 items-start">
                     <div class="lg:col-span-2 fade-in-left">
@@ -422,10 +447,10 @@
                     <div class="lg:col-span-3 fade-in-right">
                         <div class="flex items-center gap-3 mb-4 sm:mb-6">
                             <div class="w-12 h-[1px] bg-accent" aria-hidden="true"></div>
-                            <span class="text-accent text-xs sm:text-sm font-medium tracking-widest uppercase">Обо мне</span>
+                            <span class="text-accent text-xs sm:text-sm font-medium tracking-widest uppercase">О нас</span>
                         </div>
                         
-                        <h2 id="doctor-title" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
+                        <h2 id="about-title" class="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-6 leading-tight">
                             <span class="counter-value inline-block text-accent" data-target="22">0</span> <span class="years-word">лет</span> опыта<br>в ультразвуковой диагностике
                         </h2>
                         
@@ -435,14 +460,14 @@
                                     <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
                                 </div>
                                 <div>
-                                    <div class="text-accent text-xs font-medium tracking-widest uppercase mb-2">Моя миссия</div>
+                                    <div class="text-accent text-xs font-medium tracking-widest uppercase mb-2">Наша миссия</div>
                                     <p class="text-base sm:text-lg font-light leading-relaxed">Обеспечить женщинам доступ к качественной, точной и бережной диагностике, которая не вызывает тревоги, а дарит уверенность в здоровье — своём и будущего малыша.</p>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="mb-8">
-                            <h3 class="text-xl font-semibold text-primary mb-4 flex items-center gap-2"><span class="text-accent" aria-hidden="true">💡</span> Чем я могу помочь</h3>
+                            <h3 class="text-xl font-semibold text-primary mb-4 flex items-center gap-2"><span class="text-accent" aria-hidden="true">💡</span> Чем мы можем помочь</h3>
                             <ul class="space-y-3">
                                 <li class="flex items-start gap-3"><div class="flex-shrink-0 w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center mt-0.5" aria-hidden="true"><span class="text-accent text-xs font-bold">✓</span></div><p class="text-secondary/80">Экспертное УЗИ органов малого таза</p></li>
                                 <li class="flex items-start gap-3"><div class="flex-shrink-0 w-6 h-6 bg-accent/20 rounded-full flex items-center justify-center mt-0.5" aria-hidden="true"><span class="text-accent text-xs font-bold">✓</span></div><p class="text-secondary/80">Все этапы УЗИ при беременности (1, 2, 3 триместры)</p></li>
@@ -454,23 +479,50 @@
                         </div>
                         
                         <div class="mb-8">
-                            <h3 class="text-xl font-semibold text-primary mb-4 flex items-center gap-2"><span class="text-accent" aria-hidden="true">🌟</span> Мои принципы</h3>
+                            <h3 class="text-xl font-semibold text-primary mb-4 flex items-center gap-2"><span class="text-accent" aria-hidden="true"></span> Наши принципы</h3>
                             <div class="grid sm:grid-cols-3 gap-4">
-                                <div class="bg-cream rounded-xl p-4"><div class="text-primary font-semibold mb-1">Точность</div><p class="text-sm text-secondary/70">Использую современное оборудование</p></div>
-                                <div class="bg-cream rounded-xl p-4"><div class="text-primary font-semibold mb-1">Комфорт</div><p class="text-sm text-secondary/70">Провожу исследование бережно</p></div>
-                                <div class="bg-cream rounded-xl p-4"><div class="text-primary font-semibold mb-1">Понятность</div><p class="text-sm text-secondary/70">Объясняю результаты доступно и честно</p></div>
+                                <div class="bg-cream rounded-xl p-4"><div class="text-primary font-semibold mb-1">Точность</div><p class="text-sm text-secondary/70">Используем современное оборудование</p></div>
+                                <div class="bg-cream rounded-xl p-4"><div class="text-primary font-semibold mb-1">Комфорт</div><p class="text-sm text-secondary/70">Проводим исследование бережно</p></div>
+                                <div class="bg-cream rounded-xl p-4"><div class="text-primary font-semibold mb-1">Понятность</div><p class="text-sm text-secondary/70">Объясняем результаты доступно и честно</p></div>
                             </div>
                         </div>
                         
                         <div class="bg-accent/10 border-l-4 border-accent rounded-r-xl p-5">
-                            <p class="text-secondary/80 leading-relaxed"><strong class="text-primary">Помогаю с поиском врача</strong> для консультации и даю рекомендации в дальнейших действиях!</p>
+                            <p class="text-secondary/80 leading-relaxed"><strong class="text-primary">Помогаем с поиском врача</strong> для консультации и даём рекомендации в дальнейших действиях!</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="services" class="py-16 sm:py-24 lg:py-32 bg-cream" aria-labelledby="services-title">
+        <section id="video" class="py-16 sm:py-24 lg:py-32 bg-cream" aria-labelledby="video-title">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+                <div class="text-center mb-12 sm:mb-16 fade-in">
+                    <div class="flex items-center justify-center gap-3 mb-4 sm:mb-6" aria-hidden="true">
+                        <div class="w-12 h-[1px] bg-accent"></div>
+                        <span class="text-accent text-xs sm:text-sm font-medium tracking-widest uppercase">О клинике</span>
+                        <div class="w-12 h-[1px] bg-accent"></div>
+                    </div>
+                    <h2 id="video-title" class="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">Посмотрите наше видео</h2>
+                    <p class="section-subtitle text-base sm:text-lg text-secondary/70 max-w-2xl mx-auto px-4">Узнайте больше о нашем кабинете, подходе к диагностике и атмосфере, которую мы создаём для наших пациенток</p>
+                </div>
+                
+                <div class="max-w-5xl mx-auto fade-in">
+                    <div class="video-wrapper shadow-2xl">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0&modestbranding=1" title="Видео о кабинете 3D+ Диагностика доктора Дракиной" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    
+                    <div class="mt-8 text-center">
+                        <p class="text-base sm:text-lg text-secondary/80 max-w-3xl mx-auto leading-relaxed">
+                            Наш кабинет — это место, где каждая пациентка получает внимание, заботу и профессиональную диагностику. 
+                            Мы создали пространство, в котором хочется возвращаться, потому что здесь вас действительно слышат и понимают.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-16 sm:py-24 lg:py-32 bg-white" aria-labelledby="services-title">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
                 <div class="text-center mb-12 sm:mb-16 fade-in">
                     <div class="flex items-center justify-center gap-3 mb-4 sm:mb-6" aria-hidden="true">
@@ -483,32 +535,32 @@
                 </div>
                 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                    <article class="service-card relative bg-white rounded-2xl p-6 sm:p-8 card-hover fade-in">
+                    <article class="service-card relative bg-cream rounded-2xl p-6 sm:p-8 card-hover fade-in">
                         <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6" aria-hidden="true"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
                         <h3 class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3">Гинекологическое УЗИ</h3>
                         <p class="text-sm sm:text-base text-secondary/70 leading-relaxed">Экспертная ультразвуковая диагностика органов малого таза для женщин всех возрастов. Раннее выявление патологий.</p>
                     </article>
-                    <article class="service-card relative bg-white rounded-2xl p-6 sm:p-8 card-hover fade-in">
+                    <article class="service-card relative bg-cream rounded-2xl p-6 sm:p-8 card-hover fade-in">
                         <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6" aria-hidden="true"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg></div>
                         <h3 class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3">Акушерское УЗИ</h3>
                         <p class="text-sm sm:text-base text-secondary/70 leading-relaxed">Наблюдение беременности на всех сроках (1, 2, 3 триместры). Оценка развития плода, состояния плаценты и околоплодных вод.</p>
                     </article>
-                    <article class="service-card relative bg-white rounded-2xl p-6 sm:p-8 card-hover fade-in">
+                    <article class="service-card relative bg-cream rounded-2xl p-6 sm:p-8 card-hover fade-in">
                         <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6" aria-hidden="true"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
                         <h3 class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3">3D/4D УЗИ</h3>
                         <p class="text-sm sm:text-base text-secondary/70 leading-relaxed">Трёхмерная визуализация для максимально точной диагностики. Возможность увидеть малыша в объёме.</p>
                     </article>
-                    <article class="service-card relative bg-white rounded-2xl p-6 sm:p-8 card-hover fade-in">
+                    <article class="service-card relative bg-cream rounded-2xl p-6 sm:p-8 card-hover fade-in">
                         <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6" aria-hidden="true"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg></div>
                         <h3 class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3">Допплерография</h3>
                         <p class="text-sm sm:text-base text-secondary/70 leading-relaxed">Исследование сосудов плода для оценки кровотока и выявления возможных нарушений развития.</p>
                     </article>
-                    <article class="service-card relative bg-white rounded-2xl p-6 sm:p-8 card-hover fade-in">
+                    <article class="service-card relative bg-cream rounded-2xl p-6 sm:p-8 card-hover fade-in">
                         <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6" aria-hidden="true"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg></div>
                         <h3 class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3">УЗИ молочных желез</h3>
                         <p class="text-sm sm:text-base text-secondary/70 leading-relaxed">Панорамное сканирование и детальный осмотр. Классификация по BI-RADS. Поиск причин болей и нарушений.</p>
                     </article>
-                    <article class="service-card relative bg-white rounded-2xl p-6 sm:p-8 card-hover fade-in">
+                    <article class="service-card relative bg-cream rounded-2xl p-6 sm:p-8 card-hover fade-in">
                         <div class="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 sm:mb-6" aria-hidden="true"><svg class="w-6 h-6 sm:w-7 sm:h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg></div>
                         <h3 class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3">Совместное посещение</h3>
                         <p class="text-sm sm:text-base text-secondary/70 leading-relaxed">Возможность группового посещения УЗИ — папа и мама вместе могут увидеть малыша и получить консультацию.</p>
@@ -517,15 +569,15 @@
             </div>
         </section>
 
-        <section id="advantages" class="py-16 sm:py-24 lg:py-32 bg-white" aria-labelledby="advantages-title">
+        <section id="advantages" class="py-16 sm:py-24 lg:py-32 bg-cream" aria-labelledby="advantages-title">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
                 <div class="text-center mb-12 sm:mb-16 fade-in">
                     <div class="flex items-center justify-center gap-3 mb-4 sm:mb-6" aria-hidden="true">
                         <div class="w-12 h-[1px] bg-accent"></div>
-                        <span class="text-accent text-xs sm:text-sm font-medium tracking-widest uppercase">Почему я</span>
+                        <span class="text-accent text-xs sm:text-sm font-medium tracking-widest uppercase">Почему мы</span>
                         <div class="w-12 h-[1px] bg-accent"></div>
                     </div>
-                    <h2 id="advantages-title" class="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">Мои преимущества</h2>
+                    <h2 id="advantages-title" class="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">Наши преимущества</h2>
                     <p class="section-subtitle text-base sm:text-lg text-secondary/70 max-w-2xl mx-auto px-4">Сочетание экспертных знаний, современного оборудования и тёплой атмосферы</p>
                 </div>
                 
@@ -540,7 +592,7 @@
                     </div>
                     <div class="flex gap-4 sm:gap-6 fade-in-left">
                         <div class="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-primary to-primary-light rounded-2xl flex items-center justify-center" aria-hidden="true"><span class="text-xl sm:text-2xl font-bold text-white">03</span></div>
-                        <div><h3 class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3">Индивидуальный подход</h3><p class="text-sm sm:text-base text-secondary/70 leading-relaxed">Каждая пациентка уникальна. Я уделяю время и внимание, чтобы понять именно вашу ситуацию и предложить оптимальное решение.</p></div>
+                        <div><h3 class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3">Индивидуальный подход</h3><p class="text-sm sm:text-base text-secondary/70 leading-relaxed">Каждая пациентка уникальна. Мы уделяем время и внимание, чтобы понять именно вашу ситуацию и предложить оптимальное решение.</p></div>
                     </div>
                     <div class="flex gap-4 sm:gap-6 fade-in-right">
                         <div class="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-accent to-accent-light rounded-2xl flex items-center justify-center" aria-hidden="true"><span class="text-xl sm:text-2xl font-bold text-white">04</span></div>
@@ -552,7 +604,7 @@
                     </div>
                     <div class="flex gap-4 sm:gap-6 fade-in-right">
                         <div class="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-accent to-accent-light rounded-2xl flex items-center justify-center" aria-hidden="true"><span class="text-xl sm:text-2xl font-bold text-white">06</span></div>
-                        <div><h3 class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3">Помощь и рекомендации</h3><p class="text-sm sm:text-base text-secondary/70 leading-relaxed">Помогаю с поиском врача для консультации и даю рекомендации в дальнейших действиях после обследования.</p></div>
+                        <div><h3 class="text-lg sm:text-xl font-semibold text-primary mb-2 sm:mb-3">Помощь и рекомендации</h3><p class="text-sm sm:text-base text-secondary/70 leading-relaxed">Помогаем с поиском врача для консультации и даём рекомендации в дальнейших действиях после обследования.</p></div>
                     </div>
                 </div>
             </div>
@@ -646,8 +698,8 @@
                         <span class="text-accent text-xs sm:text-sm font-medium tracking-widest uppercase">Контакты</span>
                         <div class="w-12 h-[1px] bg-accent"></div>
                     </div>
-                    <h2 id="contacts-title" class="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">Свяжитесь со мной</h2>
-                    <p class="section-subtitle text-base sm:text-lg text-secondary/70 max-w-2xl mx-auto px-4">Запишитесь на приём или задайте вопрос — я всегда рада помочь</p>
+                    <h2 id="contacts-title" class="section-title text-3xl sm:text-4xl lg:text-5xl font-bold text-primary mb-4 sm:mb-6">Свяжитесь с нами</h2>
+                    <p class="section-subtitle text-base sm:text-lg text-secondary/70 max-w-2xl mx-auto px-4">Запишитесь на приём или задайте вопрос — мы всегда рады помочь</p>
                 </div>
                 
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12">
@@ -681,7 +733,7 @@
                 </div>
                 
                 <div class="fade-in">
-                    <h3 class="text-xl font-semibold text-primary mb-8 text-center">Присоединяйтесь к моему сообществу</h3>
+                    <h3 class="text-xl font-semibold text-primary mb-8 text-center">Присоединяйтесь к нашему сообществу</h3>
                     <p class="text-center text-secondary/70 max-w-2xl mx-auto mb-8">Узнавайте актуальную информацию о новинках в области ультразвуковой диагностики, получайте полезные советы и читайте вдохновляющие истории пациентов.</p>
                     <div class="flex justify-center gap-4 sm:gap-6">
                         <a href="https://www.instagram.com/doctor_drakina?igsh=MW9vdGh2bXAwM2gwbA==" target="_blank" rel="noopener noreferrer" class="social-square group flex flex-col items-center justify-center bg-white border-2 border-primary/10 rounded-2xl w-28 h-28 sm:w-32 sm:h-32 hover:border-accent hover:bg-accent/5" aria-label="Instagram доктора Дракиной">
@@ -733,7 +785,7 @@
                 <nav aria-label="Навигация в подвале">
                     <h4 class="font-semibold text-base sm:text-lg mb-4 sm:mb-6">Навигация</h4>
                     <ul class="space-y-2 sm:space-y-3">
-                        <li><a href="#doctor" class="text-sm sm:text-base text-white/60 hover:text-accent transition-colors">Обо мне</a></li>
+                        <li><a href="#about" class="text-sm sm:text-base text-white/60 hover:text-accent transition-colors">О нас</a></li>
                         <li><a href="#services" class="text-sm sm:text-base text-white/60 hover:text-accent transition-colors">Услуги</a></li>
                         <li><a href="#advantages" class="text-sm sm:text-base text-white/60 hover:text-accent transition-colors">Преимущества</a></li>
                         <li><a href="#philosophy" class="text-sm sm:text-base text-white/60 hover:text-accent transition-colors">Философия</a></li>
@@ -765,6 +817,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- Плавающая круглая кнопка записи -->
+    <button id="floatingBookingBtn" class="floating-booking-btn" onclick="openBooking()" aria-label="Записаться на приём">
+        <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+        <span class="btn-label">Записаться</span>
+    </button>
 
     <div id="bookingOverlay" class="booking-overlay" onclick="closeBookingOutside(event)" role="dialog" aria-modal="true" aria-label="Форма записи на приём">
         <div class="booking-modal">
@@ -864,12 +922,12 @@
         
         document.querySelectorAll('.counter-value').forEach(el => counterObserver.observe(el));
 
-        // ИСПРАВЛЕНО: нормальная логика навбара без !important
         const navbar = document.getElementById('navbar');
         const navLogoWhite = document.getElementById('nav-logo-white');
         const navLogoDark = document.getElementById('nav-logo-dark');
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const navLinks = document.querySelectorAll('.nav-link');
+        const floatingBookingBtn = document.getElementById('floatingBookingBtn');
         let isScrolled = false;
         
         function updateNavbar() {
@@ -894,6 +952,14 @@
                     navLinks.forEach(link => { link.style.color = '#ffffff'; });
                     mobileMenuBtn.style.color = '#ffffff';
                 }
+            }
+            
+            // Показ плавающей кнопки после hero секции
+            const heroHeight = document.getElementById('hero').offsetHeight;
+            if (currentScroll > heroHeight * 0.8) {
+                floatingBookingBtn.classList.add('visible');
+            } else {
+                floatingBookingBtn.classList.remove('visible');
             }
         }
         
