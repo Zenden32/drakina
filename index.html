@@ -10,14 +10,14 @@
         tailwind.config = {
             theme: {
                 extend: {
-colors: {
-    primary: '#075858',
-    'primary-light': '#0a7a7a',
-    secondary: '#636663',
-    accent: '#3d3d3d',        // тёмно-серый вместо #c19b6e
-    'accent-light': '#5c5c5c', // светлее тёмно-серый вместо #d4b48a
-    cream: '#faf8f5',
-},
+                    colors: {
+                        primary: '#075858',
+                        'primary-light': '#0a7a7a',
+                        secondary: '#636663',
+                        accent: '#3d3d3d',
+                        'accent-light': '#5c5c5c',
+                        cream: '#faf8f5',
+                    },
                     fontFamily: {
                         montserrat: ['Montserrat', 'sans-serif'],
                     }
@@ -25,7 +25,7 @@ colors: {
             }
         }
     </script>
-    <style>
+<style>
     * { font-family: 'Montserrat', sans-serif; }
     html { scroll-behavior: smooth; }
     html {
@@ -38,6 +38,13 @@ colors: {
         position: relative;
         width: 100%;
         max-width: 100%;
+    }
+
+    /* Единый источник цветов для кастомного CSS — держите в синхроне с tailwind.config выше */
+    :root {
+        --color-accent: #3d3d3d;
+        --color-accent-light: #5c5c5c;
+        --color-accent-rgb: 61, 61, 61;
     }
     
     /* Safe areas для iOS */
@@ -65,7 +72,7 @@ colors: {
     .service-card { overflow: hidden; }
     .service-card::before {
         content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-        background: linear-gradient(90deg, #075858, #c19b6e);
+        background: linear-gradient(90deg, #075858, var(--color-accent));
         transform: scaleX(0); transition: transform 0.4s ease; transform-origin: left;
     }
     @media (min-width: 768px) { .service-card:hover::before { transform: scaleX(1); } }
@@ -75,7 +82,7 @@ colors: {
 
     ::-webkit-scrollbar { width: 8px; }
     ::-webkit-scrollbar-track { background: #faf8f5; }
-    ::-webkit-scrollbar-thumb { background: #c19b6e; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb { background: var(--color-accent); border-radius: 4px; }
     ::-webkit-scrollbar-thumb:hover { background: #075858; }
 
     @media (max-width: 767px) {
@@ -128,7 +135,7 @@ colors: {
     .address-card { cursor: pointer; position: relative; }
     .address-card::after {
         content: 'Открыть карту'; position: absolute; bottom: 1rem; left: 50%;
-        transform: translateX(-50%); font-size: 0.7rem; color: #c19b6e;
+        transform: translateX(-50%); font-size: 0.7rem; color: var(--color-accent);
         font-weight: 500; opacity: 0; transition: opacity 0.3s ease; white-space: nowrap;
     }
     @media (min-width: 768px) { .address-card:hover::after { opacity: 1; } }
@@ -137,7 +144,7 @@ colors: {
     .booking-card { cursor: pointer; position: relative; }
     .booking-card::after {
         content: 'Открыть форму записи'; position: absolute; bottom: 1rem; left: 50%;
-        transform: translateX(-50%); font-size: 0.7rem; color: #c19b6e;
+        transform: translateX(-50%); font-size: 0.7rem; color: var(--color-accent);
         font-weight: 500; opacity: 0; transition: opacity 0.3s ease; white-space: nowrap;
     }
     @media (min-width: 768px) { .booking-card:hover::after { opacity: 1; } }
@@ -168,10 +175,10 @@ colors: {
     .philosophy-item { display: flex; flex-direction: row; align-items: center; gap: 0.75rem; text-align: left; }
     .philosophy-item .number-circle {
         width: 1.75rem; height: 1.75rem;
-        background: rgba(193, 155, 110, 0.2); border-radius: 9999px;
+        background: rgba(var(--color-accent-rgb), 0.2); border-radius: 9999px;
         display: flex; align-items: center; justify-content: center; flex-shrink: 0;
     }
-    .philosophy-item .number-circle span { color: #c19b6e; font-size: 0.75rem; font-weight: 700; line-height: 1; }
+    .philosophy-item .number-circle span { color: var(--color-accent); font-size: 0.75rem; font-weight: 700; line-height: 1; }
     @media (min-width: 640px) {
         .philosophy-item .number-circle { width: 2rem; height: 2rem; }
         .philosophy-item .number-circle span { font-size: 0.875rem; }
@@ -244,12 +251,12 @@ colors: {
         width: 60px;
         padding: 0 18px;
         border-radius: 9999px;
-        background: #c19b6e;
+        background: var(--color-accent);
         color: white;
         border: none;
         cursor: pointer;
         overflow: hidden;
-        box-shadow: 0 8px 24px rgba(193, 155, 110, 0.4);
+        box-shadow: 0 8px 24px rgba(var(--color-accent-rgb), 0.4);
         opacity: 0;
         visibility: hidden;
         transform: scale(0.8);
@@ -274,8 +281,8 @@ colors: {
     
     .floating-booking-btn:hover {
         width: 180px;
-        background: #d4b48a;
-        box-shadow: 0 12px 32px rgba(193, 155, 110, 0.5);
+        background: var(--color-accent-light);
+        box-shadow: 0 12px 32px rgba(var(--color-accent-rgb), 0.5);
     }
     
     .floating-booking-btn:active {
@@ -322,7 +329,7 @@ colors: {
         
         .floating-booking-btn:hover {
             width: 56px;
-            background: #c19b6e;
+            background: var(--color-accent);
         }
         
         .floating-booking-btn .btn-label {
